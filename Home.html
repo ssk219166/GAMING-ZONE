@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gaming Zone - The Ultimate Destination for Gaming News, Reviews, and Guides">
+    <meta name="author" content="Gaming Zone Team">
+    <title>Gaming Zone - Home</title>
+
+    <!-- Link to external Google font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* General resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #1f1f1f;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #333;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ff009d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 5px 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #ff00c8;
+        }
+
+        /* Search bar styles */
+        .search-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 8px 20px;
+            font-size: 16px;
+            border: 2px solid #ff009d;
+            border-radius: 25px;
+            background-color: #2c2c2c;
+            color: #fff;
+            transition: all 0.3s ease-in-out;
+            width: 200px;
+        }
+
+        .search-container input[type="text"]:focus {
+            border-color: #ff6f00;
+            background-color: #333;
+            outline: none;
+        }
+
+        .search-container button {
+            position: absolute;
+            right: 10px;
+            background-color: #ff009d;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .search-container button:hover {
+            background-color: #ff00c8;
+        }
+
+        /* Main content styles */
+        main {
+            padding: 40px 20px;
+        }
+
+        h1,
+        h2 {
+            color: #ff6f00;
+            margin-bottom: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #333;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #bbbbbb;
+        }
+
+        footer a {
+            color: #ff6f00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Styling for login modal */
+        /* Style for the login button in the top-right corner */
+        .login-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* Style for modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 5% auto;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #ff6f61;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        /* Modal content */
+        .container {
+            padding: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            border-radius: 4px;
+            background-color: #fce4ec;
+            font-size: 16px;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #ff8c00;
+            border-radius: 4px;
+        }
+
+        .cancelbtn:hover {
+            background-color: #ffb84d;
+        }
+
+        .btn {
+            background-color: #ff6f61;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #ff9f94;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <div class="logo" aria-label="Gaming Zone Logo">Gaming Zone</div>
+        <nav>
+            <ul>
+                <li><a href="Home.html" aria-label="Home Page">Home</a></li>
+                <li><a href="News.html" aria-label="Gaming News Page">News</a></li>
+                <li><a href="#reviews" aria-label="Reviews Section">Reviews</a></li>
+                <li><a href="#guides" aria-label="Guides Section">Guides</a></li>
+                <li><a href="#contact" aria-label="Contact Page">Contact</a></li>
+                <li><a href="New folder/Modal Login Form.html" aria aria-label="Login Page"></a>Login</li>
+            </ul>
+        </nav>
+
+        <!-- Search bar -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search bar" oninput="showSuggestions()">
+            <button type="submit" aria-label="Search">
+                <span>🔍</span>
+            </button>
+        </div>
+
+        <!-- Login Button -->
+        <div class="login-container">
+            <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+        </div>
+
+        <!-- Login Modal -->
+        <div id="id01" class="modal">
+            <form class="modal-content animate" onsubmit="redirectToHomePage(event)">
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="btn">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section id="home">
+            <h1>Welcome to Gaming Zone</h1>
+            <p>Your go-to place for the latest gaming news, reviews, and guides.</p>
+        </section>
+
+        <section class="image-container">
+            <img src="gaming-zone-video-game-neon-style_518759-160.avif" alt="Gaming Zone Neon Style" width="1000" height="1000">
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Gaming Zone. All rights reserved. | <a href="#contact" aria-label="Contact Us">Contact Us</a></p>
+    </footer>
+
+</body>
+
+</html>

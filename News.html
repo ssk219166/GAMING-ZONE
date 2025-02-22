@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Latest gaming news, updates, and events">
+    <meta name="author" content="Gaming Zone Team">
+    <title>Gaming Zone - News</title>
+    
+    <!-- Link to external Google font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* General resets */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #1f1f1f;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #444;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ff00a2; /* Accent color */
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff0000;
+            font-weight: 600;
+            padding: 5px 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #00cfff; /* New accent color for hover effect */
+        }
+
+        /* Main content styles */
+        main {
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #04ffd5; /* Accent color */
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .news-article {
+            background-color: #1e1e1e;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            border-left: 5px solid #00ff2f; /* Accent color border */
+        }
+
+        .news-article:hover {
+            transform: scale(1.02);
+            border-left: 5px solid #00cfff; /* New accent color on hover */
+        }
+
+        .news-article h3 {
+            color: #ff6f00; /* Accent color */
+            font-size: 1.5rem;
+        }
+
+        .news-article p {
+            color: #bbbbbb;
+            margin-bottom: 10px;
+        }
+
+        .news-article a {
+            color: #00cfff; /* New accent color */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .news-article a:hover {
+            color: #ff6f00; /* Hover color for links */
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #1f1f1f;
+            text-align: center;
+            padding: 15px;
+            border-top: 2px solid #444;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #bbbbbb;
+        }
+
+        footer a {
+            color: #00cfff; /* New accent color */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #ff6f00; /* Hover color for links */
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <div class="logo">Gaming Zone</div>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Revsiews.html">Reviews</a></li>
+                <li><a href="#guide">Guides</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section id="news">
+            <h1>Gaming News</h1>
+            <p>Stay updated with the latest news and announcements from the gaming world.</p>
+
+            <!-- News Articles -->
+            <div class="news-article">
+                <h3>The Evolution of Call of Duty:</h3>
+                <p>A Legacy of Action, Strategy, and Innovation</p>
+                <a href="Newses/readmore1.html">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <h3>Game of the Year Nominees Announced</h3>
+                <p>The list of nominees for the prestigious Game of the Year award has been revealed. Some of the biggest titles of the year have made the cut, including "Epic Journey" and "Battle Royale Extreme"...</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <h3>Upcoming Game Patch Brings Major Changes</h3>
+                <p>Gamers are eagerly awaiting the upcoming patch for "World of Warfare." It promises major changes to gameplay, balancing, and new content that could change the way we play forever...</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="news-article">
+                <h3>Exclusive Interview with Top Game Developers</h3>
+                <p>We sat down with the creators of "Mega Shooter" to discuss the game’s development process, challenges faced, and the vision behind their innovative gameplay mechanics...</p>
+                <a href="#">Read More</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Gaming Zone. All rights reserved. | <a href="#contact">Contact Us</a></p>
+    </footer>
+
+    <!-- JavaScript for basic interactivity and loading check -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Gaming Zone News page is ready!');
+        });
+    </script>
+</body>
+
+</html>
